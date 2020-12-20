@@ -52,5 +52,11 @@ header
 {
     width:64px;
     height:64px;
+    border-radius:50%;
+}
+
+.chirper-card h2::first-letter
+{
+    color:cornflowerblue
 }
 
