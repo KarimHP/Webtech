@@ -5,8 +5,52 @@ body {
 }
 
 
+/*
+
+if kleiner als 768 Pixeln: Drei Kategorien Trending, Deine Favoriten, und Chirps von Freunden untereinander angezeigt werden 
+
+if 768 und 992 Pixeln Trending und Deine Favoriten nebeneinander und chirps von freunden unten 
+
+if 992 Pixel alle drei Kategorien nebeneinander 
+
+*/ 
 
 header
 {
     background-color: cornflowerblue
 }
+
+
+
+
+@media (max-width: 767px){
+.chirper-cols {
+ display: grid;
+ grid-template-columns: 1fr;
+ grid-template-rows: 1fr 1fr 1fr;
+ }}
+
+@media (min-width: 768px){
+ .chirper-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+ }}
+
+@media (min-width: 993px){
+ .chirper-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+ }}
+
+
+/*- In den Chirps soll das Profilbild des Nutzers mit einem Abstand von 12 Pixeln links vom Inhaltstehen. Außerdem soll es genau 64x64 Pixel groß und komplett rund sein. ()
+*/
+
+.chirper-card img
+{
+    width:64px;
+    height:64px;
+}
+
