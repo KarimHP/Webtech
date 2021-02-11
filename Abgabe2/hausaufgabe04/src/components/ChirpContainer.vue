@@ -1,11 +1,18 @@
 <template>
   <b-container>
     <!-- TODO -->
-    <div v-bind:key="chirp.id" v-for="chirp in chirps">
-      <ChirpCard v-bind:chirp = "chirp"/>
-      {{chirp.author}}
+    <ChirpCard v-for="chirp in chirps"
+               v-bind:key="chirp.id"
+               v-bind:id="chirp.id"
+               v-bind:author="chirp.author"
+               v-bind:thumbnail="chirp.thumbnail"
+               v-bind:text="chirp.text"
+               v-bind:hashtags="chirp.hashtags"
+               v-bind:category="chirp.category"
+
       
-    </div>
+       ></ChirpCard>
+    
   </b-container>
 </template>
 
@@ -15,7 +22,9 @@ export default {
   name: "ChirpContainer",
   //TODO
   components:{ChirpCard},
-  props:["chirps"]
+  props:{chirps:
+          {type:Object,
+            required:true}}
 };
 </script>
 
