@@ -1,6 +1,9 @@
 <template>
-  <b-card>
-    <!-- TODO -->
+  <b-card >
+  <b-card-text>
+    
+  </b-card-text>
+      
   </b-card>
 </template>
 
@@ -12,6 +15,7 @@ export default {
       return require("../assets/" + thumbnailPath);
     },
     // TODO
+    props:["chirps"]
   },
 };
 </script>

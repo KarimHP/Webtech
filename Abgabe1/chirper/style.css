@@ -17,7 +17,9 @@ if 992 Pixel alle drei Kategorien nebeneinander
 
 header
 {
-    background-color: cornflowerblue
+    background-color: cornflowerblue;
+    box-shadow: 10px 10px 5px grey;
+  
 }
 
 
@@ -48,15 +50,61 @@ header
 /*- In den Chirps soll das Profilbild des Nutzers mit einem Abstand von 12 Pixeln links vom Inhaltstehen. Außerdem soll es genau 64x64 Pixel groß und komplett rund sein. ()
 */
 
+
+
 .chirper-card img
 {
     width:64px;
     height:64px;
     border-radius:50%;
+    float:left;
+    margin-right: 12px; 
+
+}
+
+.chirper-card
+{
+    border-radius: 12px;
+    padding: 20px 20px 20px 20px; 
+    overflow: auto;
+    box-shadow: 5px 5px #C0C0C0;
+
 }
 
 .chirper-card h2::first-letter
 {
     color:cornflowerblue
 }
+
+
+
+h1
+{
+    border:dotted;
+    border-width: 1px;
+}
+
+h2
+{
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+}
+
+
+.chirp
+{
+    float:left;
+}
+
+
+
+/* 
+- Die Chirps und der Header der Seite sollen einen Schatten haben. ()
+*/ 
+
+
+
+
+
+
 
