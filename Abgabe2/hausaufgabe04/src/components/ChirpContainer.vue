@@ -2,7 +2,7 @@
   <b-container>
     <!-- TODO -->
     <b-row > 
-      <b-col  lg = "4" md = "6" sm ="12" v-for= "chirp in chirps" :key="chirp.index">
+      <b-col xl = "4" lg = "4" md = "6" sm ="12" xs = "12" v-for= "chirp in chirps" :key="chirp.index">
     <ChirpCard 
                v-bind:key="chirp.id"
                v-bind:id="chirp.id"

@@ -1,7 +1,7 @@
 <template>
   <b-card v-bind:title="this.author"
           v-bind:img-src="getImgUrl(this.thumbnail)" img-left >
-    <p>{{this.text}}<span id = "hashtagspan" v-bind:key="hashtag.id" v-for="hashtag in hashtags">{{hashtag}}</span></p>
+    <b-card-text>{{this.text}}<span id = "hashtagspan" v-bind:key="hashtag.id" v-for="hashtag in hashtags">{{hashtag}}</span></b-card-text>
       
   </b-card>
 </template>
