@@ -1,6 +1,8 @@
 <template>
   <b-container>
     <!-- TODO -->
+    <b-row > 
+      <b-col  cols = "6">
     <ChirpCard v-for="chirp in chirps"
                v-bind:key="chirp.id"
                v-bind:id="chirp.id"
@@ -9,9 +11,11 @@
                v-bind:text="chirp.text"
                v-bind:hashtags="chirp.hashtags"
                v-bind:category="chirp.category"
-
+   
       
        ></ChirpCard>
+        </b-col>
+      </b-row>
     
   </b-container>
 </template>
