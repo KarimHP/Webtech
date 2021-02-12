@@ -2,8 +2,8 @@
   <b-container>
     <!-- TODO -->
     <b-row > 
-      <b-col  cols = "6">
-    <ChirpCard v-for="chirp in chirps"
+      <b-col  lg = "4" md = "6" sm ="12" v-for= "chirp in chirps" :key="chirp.index">
+    <ChirpCard 
                v-bind:key="chirp.id"
                v-bind:id="chirp.id"
                v-bind:author="chirp.author"
@@ -30,6 +30,7 @@ export default {
           {type:Object,
             required:true}}
 };
+
 </script>
 
 <style scoped>
