@@ -38,7 +38,7 @@ img
 }
 
 #hashtagspan{
-  color:blue;
+  color:cornflowerblue;
 
 }
 </style>
