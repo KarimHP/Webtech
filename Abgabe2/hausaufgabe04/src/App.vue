@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav-bar @added-chirp="addedChirp" @filter-chirps="updateFilterString" />
+    <nav-bar @added-chirp="addedChirp" @filterChirps="updateFilterString" />
     <chirp-container :chirps="filteredChirps" />
   </div>
 </template>
@@ -34,13 +34,12 @@ export default {
   computed: {
     filteredChirps() {
       if (this.filterString.startsWith("#")) {
-        return this.chirps.filter((chirp) =>
+        return this.chirps.filter(chirp =>
           chirp.hashtags.includes(this.filterString)
         );
       } else {
         return this.chirps.filter(
-          (chirp) =>
-            !this.filterString || chirp.category.includes(this.filterString)
+          (chirp) => !this.filterString || chirp.category.includes(this.filterString)
         );
       }
     },
