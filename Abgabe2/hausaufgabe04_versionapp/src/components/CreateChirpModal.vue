@@ -67,12 +67,10 @@
                     this.validation.author = null
                     this.validation.text = false
                 } else {
-                    
                     this.validation = {
                         author: null,
                         text: null,
                         hashtags: null
-                        
                     };
                     this.newChirp.hashtags = this.hashtagString
                         .split(" ")
@@ -84,8 +82,6 @@
                         text: "",
                         hashtags: ''
                     }
-                    bvModalEvt.preventDefault();
-                    return;
                 }
             },
         },

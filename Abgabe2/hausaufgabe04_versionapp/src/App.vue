@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <nav-bar @added-chirp="addedChirp" @filterChirps="updateFilterString" />
+    <nav-bar  @filterChirps="updateFilterString" >
+      <create-chirp-modal @addedChirp="addedChirp"/>
+    </nav-bar>
     <chirp-container :chirps="filteredChirps" />
   </div>
 </template>
@@ -8,14 +10,14 @@
 <script>
 import NavBar from "./components/NavBar.vue";
 import ChirpContainer from "./components/ChirpContainer.vue";
-
+import CreateChirpModal from "./components/CreateChirpModal";
 
 export default {
   name: "App",
   components: {
+    CreateChirpModal,
     NavBar,
     ChirpContainer,
-  
   },
   methods: {
     addedChirp(newChirp) {
@@ -27,7 +29,6 @@ export default {
         hashtags: newChirp.hashtags,
         category: "other",
       });
-      console.log(this.idCounter);
     },
     updateFilterString(filter) {
       this.filterString = filter;

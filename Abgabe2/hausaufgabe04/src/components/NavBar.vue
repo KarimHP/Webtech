@@ -10,7 +10,7 @@
       <b-navbar-nav class="ml-auto">
         <b-form-input size="sm" class="mr-4" placeholder="#hashtag suchen" v-model="hashtag" @keydown.enter="filterHashtag"></b-form-input>
         <!-- TODO -->
-        <create-chirp-modal @click="forwardEvent"></create-chirp-modal>
+        <create-chirp-modal @addedChirp = "forwardEvent"></create-chirp-modal>
       </b-navbar-nav>
   </b-navbar>
 </template>
@@ -18,9 +18,10 @@
 <script>
 import CreateChirpModal from './CreateChirpModal.vue';
 
+
     export default {
-  components: { CreateChirpModal },
-        name: "NavBar",
+  components: {CreateChirpModal},
+        name:"Navbar",
         data() {
           return {
             activeCategory: '',
@@ -52,10 +53,11 @@ import CreateChirpModal from './CreateChirpModal.vue';
 
 
         //Event weiterleiten
-        forwardEvent()
+        forwardEvent(newChirp)
         {
-              this.$emit('added-chirp');
+              this.$emit('added-chirp',newChirp);
         }
+
 
         }
     }
