@@ -8,7 +8,7 @@
       </b-navbar-nav>
 
       <b-navbar-nav class="ml-auto">
-        <b-form-input size="sm" class="mr-4" placeholder="#hashtag suchen" v-model="hashtag" @keyup.enter="filterHashtag"></b-form-input>
+        <b-form-input size="sm" class="mr-4" placeholder="#hashtag suchen" v-model="hashtag" @keydown.enter="filterHashtag"></b-form-input>
         <!-- TODO -->
       </b-navbar-nav>
   </b-navbar>
@@ -34,7 +34,14 @@
       },
         methods: {
           filterHashtag(){
-            this.$emit('filterChirps',this.hashtag)
+            if(this.hashtag.startsWith('#'))
+            {
+              this.$emit('filterChirps',this.hashtag);
+            }
+            else{
+              this.$emit('filterChirps', '#' + this.hashtag);
+            }
+            
           },
           filterCategory(val){
             this.$emit('filterChirps',val)
