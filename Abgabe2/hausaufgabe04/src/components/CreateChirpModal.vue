@@ -10,7 +10,7 @@
                 <b-form-input v-model="newChirp.author" required :state="validation.author">
                 </b-form-input>
                 <br>
-                <h6>Deine Nachrichit*</h6>
+                <h6>Deine Nachricht*</h6>
                 <b-form-textarea
                         placeholder="Max. 200 Zeichen"
                         rows="3"
