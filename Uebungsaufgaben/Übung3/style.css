@@ -1,0 +1,68 @@
+body
+{
+margin: 0px; 
+font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1, h2
+{
+    margin:0px;
+    background-color: aliceblue;
+    padding: 20px 0px 0px 10px;
+    color: blue;
+}
+
+h2
+{
+    padding-bottom: 5px;
+    border-bottom: solid 1px blue;
+}
+
+li
+{
+    border: solid 1px black;
+    margin-bottom: 20px;
+    padding: 5px 5px 5px 5px;
+    box-shadow:5px 3px grey;
+    max-width: 480px;
+    list-style: none;
+}
+
+li:first-line
+{
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+li::first-letter
+{
+    color:blue;
+}
+
+input
+{
+    border:1px solid blue; 
+}
+
+input:focus
+{
+border: 2px solid red; 
+}
+
+#invite
+{
+    background-color: white;
+}
+
+#invite:hover
+{
+    background-color: aliceblue;
+}
+
+input[type^="submit"] {
+	background-color: white;
+}
+
+input[type^="submit"]:hover {
+	background-color: aliceblue;
+}
