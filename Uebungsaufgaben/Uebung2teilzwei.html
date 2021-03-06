@@ -1,0 +1,96 @@
+<html>
+
+
+        <head>
+    
+            <meta charset="utf-8">
+            <title>Message Decrypt0r</title>
+            
+            <style>
+            
+                #goButton
+                {
+                    margin-top: 50px; 
+                }
+                
+            </style>
+            
+        </head>
+
+        <body>
+    
+            <h1> Watch this getting life encrypted:</h1>
+            <span>Word:</span>
+            <div id = "toencrypt">test</div>
+            <br>
+            <div>Encrypted Word: <span id = "encrypted"></span></div>
+            <button id = "goButton" onclick="transformToHexa()">Encrypt it</button>
+            <button id = "backButton" onclick="transformFromHexa()">Decrypt it</button>
+            <div>Decrypted again: <span id ="decrypted"></span></div>
+            
+        </body>
+
+
+        <script>
+    
+        var data = "A";
+        console.log("0x" + data.charCodeAt(0).toString(16));
+        var encrA = "0x" + data.charCodeAt(0).toString(16);
+        console.log(String.fromCharCode(parseInt(encrA, 16)));
+            
+        function transformToHexa()
+            {
+                //Wort was im to encrypt steht herholen
+                var word = document.getElementById("toencrypt").innerHTML;
+                
+                var encryptedWord;
+                for (var i = 0; i<word.length;i++)
+                    {
+                        if (i == 0)
+                            {
+                                encryptedWord = "0x" + word.charCodeAt(i).toString(16);
+                            }
+                        else{
+                        encryptedWord = encryptedWord + ("0x" + word.charCodeAt(i).toString(16));
+                            }
+                    }
+                document.getElementById("encrypted").innerHTML = encryptedWord;
+                
+            }
+            
+            
+            function transformFromHexa()
+            {
+                var word = document.getElementById("encrypted").innerHTML;
+                //das ganze in ein Array übertragen
+                
+                var splittedword = word.split("0x");
+                console.log(splittedword);
+                
+                //Zurückübersetzen
+                var decryptedWord; 
+                for (var i = 1; i <splittedword.length; i++ )
+                    {
+                        if (i == 1)
+                            {
+                                decryptedWord = String.fromCharCode(parseInt(splittedword[i], 16));
+                            }
+                        else
+                        {
+                            decryptedWord = decryptedWord + String.fromCharCode(parseInt(splittedword[i], 16));
+                        }
+                    }
+                
+                document.getElementById("decrypted").innerHTML = decryptedWord;
+                
+             
+                
+            }
+            
+        
+            
+    
+        </script>
+    
+
+</html>

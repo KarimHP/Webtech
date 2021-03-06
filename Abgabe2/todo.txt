@@ -1,0 +1,8 @@
+Vorgehen: 
+
+- die navigationslinks clickable machen & zb einen alert auslösen wenn sie geklickt werden X)
+
+- Funktionen schreiben für die clickable navigationslinks () 
+
+
+3.DieNavBar-Komponente umfasst Anwendungslogik zum Filtern der Chirps und zumAnlegen neuer Chirps.•DieApperwartet von derNavBarsogenanntefilter-chirpsEvents, die einenString übergeben, nach dem die angezeigten Chirps gefiltert werden sollen. DiesesEvent kann auf zwei Arten ausgelöst werden:–Klickt der Nutzer auf einen der drei Navigationslinks auf der linken Seite derLeiste, wird das Event ausgelöst und als String der jeweilige Name der Kategorieübergeben: ein leerer String fürAlle,featuredfürFeaturedundfriendsfürFreunde. Außerdem wird der jeweils geklickte Link alsactivehervorgehoben.–Das Eingabefeld auf der rechten Seite der Navigationsleiste ermöglicht es Nut-zern,  die  Chirps  nachHashtagszu  filtern.  Dazu  geben  sie  das  gewünschteHashtag ein und lösen das Event durch Drücken der Enter-Taste aus. Überge-ben wird dabei der Inhalt des Eingabefelds. Anschließend wird der Inhalt desEingabefelds automatisch zurückgesetzt.•Fügen Sie rechts vom Eingabefeld dasCreateChirpModalein. Dieses Modallöst einadded-chirpEvent aus, welches an dieAppweitergeleitet werden muss,damit ein neuer Chirp hinzugefügt werden kann. Die Logik zum hinzufügen neuerChirps befindet sich komplett imCreateChirpModalsowie derApp, sie müssenan dieser Stelle also nur das Event empfangen und weiterleiten.
